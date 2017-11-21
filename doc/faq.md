@@ -70,7 +70,7 @@ tfoot { display:table-footer-group; }
 
 ###### *Q*: How to convert page with relative links from stdin / How to use relative media URLs
 
-*A*: When you convert an HTML file with relative links/media URLs into PDF, you need to either:
+*A*: The fact is: wkhtmltopdf does not know how to resolve your relative links. The best it can do is to try to find those relative paths based on it's current working directory. Most of the time that fails. So, when you convert an HTML file with relative links/media URLs into PDF, you need to either:
 * Switch to absolute links/media URLs
 * Or use `<base></base>` tag to specify what's the base URL of those relative links.
 
